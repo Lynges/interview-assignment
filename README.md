@@ -4,7 +4,7 @@ Dette er en simpel opgave for at give kandidaten en mulighed for at vise lidt af
 
 Forventet tidsforbrug: 2-3 timer.
 
-Opgaven kan enten løses ved at klone dette repository, og sende et link tilbage - eller blot pakke løsningen i én .zip-fil og sende den til <tab@billigvvs.dk>.
+Opgaven kan enten løses ved at klone dette repository, og sende et link tilbage - eller blot pakke løsningen i én .zip-fil og sende et link til denne til <tab@billigvvs.dk>. Vi kan ikke modtage .zip-filer via mail.
 
 ## Opgaven
 
