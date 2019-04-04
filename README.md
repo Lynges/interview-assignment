@@ -8,13 +8,13 @@ Opgaven kan enten løses ved at klone dette repository, og sende et link tilbage
 
 ## Opgaven
 
-Kod en simpel webshop, med følgende views:
+Kod en simpel webshop, med (som minimum) følgende views:
 
  * Forside, der viser alle produkter
  * Varekort, hvorfra man kan lægge et produkt i sin kurv
  * Kurv, der viser hvad man har lagt i kurven
 
-Mens opgaven løses, skal følgende spørgsmål overvejes:
+Mens opgaven løses, skal følgende spørgsmål overvejes forberedes til uddybning til næste samtale:
 
  * Hvordan skal databasestrukturen se ud?
  * Hvorfor laver du applikationsstrukturen som du gør?
@@ -22,6 +22,8 @@ Mens opgaven løses, skal følgende spørgsmål overvejes:
  * Hvor kan vi få performance bottlenecks på sigt?
  * Hvilke andre systemer/services kan man med fordel udvide med senere?
  * Hvilke features kan der være i en version 2?
+ * Hvilke teknologier kan med fordel benyttes til at hoste og deploye denne applikation?
+   * Klargør gerne en beskrivelse og/eller tegning af infrastrukturen.
 
 Det er på ingen måder meningen at løsningen skal være en komplet shop, men mere en hjælp til at reflektere over ovenstående spørgsmål.
 
