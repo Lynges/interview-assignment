@@ -1,1 +1,4 @@
 __pycache__
+.vscode/*
+src/testshop.dk.db
+mockproducts.json
