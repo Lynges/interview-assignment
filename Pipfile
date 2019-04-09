@@ -14,6 +14,7 @@ MarkupSafe = "==1.0"
 Werkzeug = "==0.14.1"
 peewee = "*"
 unidecode = "*"
+simplejson = "*"
 
 [requires]
 python_version = "3.7"

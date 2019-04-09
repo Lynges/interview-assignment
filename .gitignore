@@ -2,3 +2,4 @@ __pycache__
 .vscode/*
 src/testshop.dk.db
 mockproducts.json
+src/frontend/node_modules/*

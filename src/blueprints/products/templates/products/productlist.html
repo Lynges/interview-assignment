@@ -1,0 +1,37 @@
+{% extends 'frontpage.html' %}
+
+{% block maincontent %}
+    <nav class="nav cat-nav nav-pills nav-justified mt-3">
+        {% for category in categories %}
+        <a
+            class="nav-item nav-link {% if category.name == current_cat %}active{% endif %}"
+            href="{{ url_for('.show_products', cat=category.name) }}">
+                {{ category.name|title }}
+        </a>
+        {% endfor %}
+    </nav>
+    <div class="row">
+        {% for product in products %}
+            <div class="col-3 product-tile">
+                <img class="img-fluid" src="{{ product.image_url }}" alt="">
+                <h6>{{ product.name|title }}</h6>
+                <p>{{ product.description|truncate(64) }}</p>
+                <div class="d-flex align-items-center justify-content-between">
+                    <h6><small class="text-muted">Pris:</small> {{ product.price }}</h6>
+                    <a href="{{ url_for('.single_product', product_id=product.id) }}" class="btn btn-primary">Se mere</a>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+    <center>
+        <div class="btn-group btn-group-lg pagebuttons" role="group">
+            {% if prevpage %}
+                <a href="{{ url_for('.show_products', cat=current_cat, page=prevpage) }}" class="btn btn-info">Forrige side</a>
+            {% endif %}
+            {% if nextpage %}
+                <a href="{{ url_for('.show_products', cat=current_cat, page=nextpage) }}" class="btn btn-info">Næste side</a>
+            {% endif %}
+        </div>
+    </center>
+{% endblock maincontent %}

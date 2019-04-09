@@ -1,0 +1,30 @@
+{% extends 'frontpage.html' %}
+
+{% block maincontent %}
+    <nav class="nav cat-nav nav-pills my-1 py-1">
+
+        <a
+            class="nav-item nav-link"
+            href="{{ url_for('.show_products', cat=product.category.name) }}">
+                << Tilbage til {{ product.category.name|title }}
+        </a>
+
+    </nav>
+    <div class="row">
+        <div class="col-8 imagecontainer">
+            <img class="img-fluid" src="https://dummyimage.com/800x600/ccc/000&text={{ product.name|truncate(10) }}" />
+        </div>
+        <div class="col-4">
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h3>{{ product.name|title }}</h3></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"><h6>Pris:</h6><h4>{{ product.price }}</h4></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"><h6>Lager:</h6><span class="badge {% if product.stock_count > 0 %}badge-success{% else %}badge-error{% endif %} badge-pill">{{ product.stock_count }} stk.</span></li>
+                <li class="list-group-item text-right"><span id="AddToBasketButtonContainer" data-productid="{{ product.id }}"></span></li>
+              </ul>
+        </div>
+    </div>
+    <div class="row my-3 py-3">
+        <div class="col"><strong>Beskrivelse:</strong><br>{{ product.description }}</div>
+    </div>
+{% endblock maincontent %}

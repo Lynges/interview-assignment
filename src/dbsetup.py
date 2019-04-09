@@ -70,8 +70,8 @@ if not os.path.isfile(DB_FILENAME):
             "description": product['description'],
             "category": categories[product['category']],
             "image_url":
-                'https://dummyimage.com/260x100&text={:.7}/ccc/000'.format(
-                    unidecode.unidecode(product['category'])),
+                'https://dummyimage.com/260x100/ccc/000&text={:.7}'.format(
+                    unidecode.unidecode(product['name'])),
             "stock_count": product['stockcount'],
             "expected_restocking": product['expectedstocking'],
         })
